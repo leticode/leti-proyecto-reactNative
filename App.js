@@ -53,7 +53,7 @@ const eliminarTarea = (id) => {
       />
 
       <FlatList data={tasks} keyExtractor={(item) => item.id} renderItem={({ item }) => (
-          <Pressable  onPress={() => eliminarTarea(item.id)} style={styles.task}>
+          <Pressable android_ripple={{ color: "#ccc" }} onPress={() => eliminarTarea(item.id)} style={styles.task}>
             <Text style={styles.taskText}>{item.text}</Text>
             <Text style={styles.deleteText}>Tocar para eliminar la tarea</Text>
           </Pressable>
